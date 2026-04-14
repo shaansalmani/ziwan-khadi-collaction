@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RIZWAN CLOTHES | The Heritage Curator</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="script.js"></script>
+<style>
+  /* ===============================
+   WHATSAPP BUTTON - PREMIUM STYLE
+================================= */
+#whatsappBtn {
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 16px;
+  font-size: 14px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #422714, #422714);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Hover effect */
+#whatsappBtn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
+
+/* Click effect */
+#whatsappBtn:active {
+  transform: scale(0.98);
+}
+
+/* Shine animation */
+#whatsappBtn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.4),
+    transparent
+  );
+  transition: all 0.6s ease;
+}
+
+#whatsappBtn:hover::before {
+  left: 120%;
+}
+
+/* Optional WhatsApp icon */
+#whatsappBtn::after {
+  content: "📱";
+  margin-left: 8px;
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+  #whatsappBtn {
+    font-size: 12px;
+    padding: 14px;
+    letter-spacing: 2px;
+  }
+}
+    /* Full bleed images */
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Hero & showcase images stronger */
+header img,
+section img {
+  width: 100vw;
+  max-width: 100%;
+}
+    /* ===============================
+   FORCE FULL WIDTH CONTAINERS
+================================= */
+.max-w-7xl {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+/* Remove side padding on mobile for full bleed look */
+@media (max-width: 768px) {
+  .px-8 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+/* Optional: controlled padding for clean look */
+@media (min-width: 768px) {
+  .px-8 {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .px-8 {
+    padding-left: 48px !important;
+    padding-right: 48px !important;
+  }
+}
+    /* ===============================
+   GLOBAL RESET & BASE
+================================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===============================
+   NAVBAR RESPONSIVE
+================================= */
+nav {
+  padding: 16px !important;
+}
+
+@media (min-width: 768px) {
+  nav {
+    padding: 24px 48px !important;
+  }
+}
+
+/* ===============================
+   HERO SECTION (ADVANCED TYPOGRAPHY)
+================================= */
+header {
+  height: 100vh;
+  min-height: 500px;
+}
+
+header h1 {
+  font-size: clamp(32px, 8vw, 120px) !important;
+  line-height: 1.1;
+}
+
+header p {
+  font-size: clamp(10px, 2vw, 20px) !important;
+  letter-spacing: clamp(2px, 0.5vw, 6px) !important;
+}
+
+/* ===============================
+   SECTION SPACING SYSTEM
+================================= */
+section {
+  padding: 60px 16px !important;
+}
+
+@media (min-width: 768px) {
+  section {
+    padding: 100px 32px !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  section {
+    padding: 140px 64px !important;
+  }
+}
+
+/* ===============================
+   GRID FIXES (MOBILE-FIRST)
+================================= */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr !important;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .grid.md\:grid-cols-12 {
+    grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+  }
+
+  .grid.md\:grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .grid.md\:grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+/* ===============================
+   CARD / IMAGE RESPONSIVE FIX
+================================= */
+.aspect-\[4\/5\],
+.aspect-\[3\/4\],
+.aspect-\[2\/3\],
+.aspect-square {
+  width: 100%;
+  height: auto;
+}
+
+/* Prevent overflow on mobile */
+@media (max-width: 768px) {
+  .-mt-24 {
+    margin-top: 0 !important;
+  }
+}
+
+/* ===============================
+   LOOKBOOK FIX
+================================= */
+@media (max-width: 768px) {
+  .md\:pt-24 {
+    padding-top: 0 !important;
+  }
+}
+
+/* ===============================
+   PARALLAX SECTION FIX
+================================= */
+section.relative.h-\[819px\] {
+  height: 500px !important;
+}
+
+@media (min-width: 768px) {
+  section.relative.h-\[819px\] {
+    height: 700px !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  section.relative.h-\[819px\] {
+    height: 819px !important;
+  }
+}
+
+/* ===============================
+   TEXT SCALING SYSTEM
+================================= */
+h2 {
+  font-size: clamp(24px, 5vw, 64px) !important;
+}
+
+h3 {
+  font-size: clamp(18px, 4vw, 36px) !important;
+}
+
+p {
+  font-size: clamp(14px, 2vw, 18px);
+  line-height: 1.6;
+}
+
+/* ===============================
+   FORM RESPONSIVE
+================================= */
+form {
+  width: 100%;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  form input,
+  form textarea {
+    font-size: 16px;
+  }
+}
+
+/* ===============================
+   BUTTON (WHATSAPP CTA)
+================================= */
+a[href*="wa.me"] {
+  font-size: 12px;
+  padding: 14px;
+}
+
+@media (min-width: 768px) {
+  a[href*="wa.me"] {
+    font-size: 14px;
+    padding: 18px;
+  }
+}
+
+/* ===============================
+   FOOTER FIX
+================================= */
+footer {
+  padding: 60px 16px !important;
+}
+
+@media (min-width: 768px) {
+  footer {
+    padding: 100px 32px !important;
+  }
+}
+
+/* ===============================
+   PREMIUM SMOOTH EFFECTS
+================================= */
+* {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Smooth scroll already enabled but reinforce */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===============================
+   EXTRA MOBILE POLISH
+================================= */
+@media (max-width: 480px) {
+  nav div {
+    font-size: 16px !important;
+  }
+
+  header {
+    min-height: 450px;
+  }
+
+  section {
+    padding: 50px 12px !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-container": "#785a1a",
+                    "tertiary-container": "#463b24",
+                    "primary-fixed": "#ffdad7",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-container": "#fed488",
+                    "on-primary": "#ffffff",
+                    "surface-container-low": "#f6f3ee",
+                    "on-primary-fixed": "#410005",
+                    "tertiary-fixed": "#f3e0c0",
+                    "surface-bright": "#fcf9f4",
+                    "on-tertiary-fixed": "#231a06",
+                    "error-container": "#ffdad6",
+                    "secondary": "#775a19",
+                    "on-primary-fixed-variant": "#802828",
+                    "on-secondary-fixed": "#261900",
+                    "on-error-container": "#93000a",
+                    "surface-tint": "#9f3f3e",
+                    "surface-variant": "#e5e2dd",
+                    "on-secondary-fixed-variant": "#5d4201",
+                    "tertiary": "#2f2510",
+                    "surface-container-highest": "#e5e2dd",
+                    "on-tertiary-fixed-variant": "#51452d",
+                    "surface-container": "#f0ede8",
+                    "on-surface-variant": "#5a413d",
+                    "on-primary-container": "#fa8581",
+                    "surface-container-high": "#ebe8e3",
+                    "primary-container": "#721e1f",
+                    "outline": "#8e706c",
+                    "tertiary-fixed-dim": "#d6c4a5",
+                    "outline-variant": "#e2bfb9",
+                    "on-background": "#1c1c19",
+                    "on-tertiary-container": "#b5a587",
+                    "on-error": "#ffffff",
+                    "surface-dim": "#dcdad5",
+                    "on-secondary": "#ffffff",
+                    "inverse-on-surface": "#f3f0eb",
+                    "error": "#ba1a1a",
+                    "primary-fixed-dim": "#ffb3af",
+                    "inverse-primary": "#ffb3af",
+                    "surface": "#fcf9f4",
+                    "secondary-fixed-dim": "#e9c176",
+                    "primary": "#53060c",
+                    "on-surface": "#1c1c19",
+                    "secondary-fixed": "#ffdea5",
+                    "inverse-surface": "#31302d",
+                    "background": "blurred",
+                    "on-tertiary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>.font-notoSerif {
+    font-family: "Noto Serif", serif
+    }
+.font-manrope {
+    font-family: "Manrope", sans-serif
+    }
+.grain-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.03;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCYdNtJ1h9pIj8FLU2ZDr0BiTU8SLPq1dPIA8p9-N01jtf9o04EZPuEuoAJpCdEz7weAZBWsAK07CuCw3Abja9IkvONk-JTBf1Hl_-rf_l-Ae_GNI-j1D0ABl5Nx2nyYBOPsZhMYOi2PLi9YlP-ZxNaCVkHJhZMyhnSBLlt4IxdDAwETSH128KOy4xnOlVZhpJeGZ2jjc0Fev7t6FuKbHGQHPM5YBbLLFhyEv1_9V-tFhRwsuCNMEQmWkonotFvrHTpO6T9jYeIPIj7)
+    }
+.text-shadow-editorial {
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.15)
+    }</style>
+</head>
+<body class="bg-surface text-on-surface font-manrope selection:bg-primary/20">
+<div class="grain-overlay"></div>
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-[blur]/80 dark:bg-[#1c1c19]/80 backdrop-blur-xl flex justify-between items-center px-12 py-8 w-full">
+<div class="text-2xl font-notoSerif italic tracking-tighter text-[#ffffff] dark:text-[black] ">RIZWAN KHADI COLLECTION</div>
+<!-- <div class="hidden md:flex gap-12 items-center">
+<a class="font-notoSerif uppercase tracking-widest text-sm text-[#775a19] border-b border-[#775a19] pb-1 hover:opacity-100 hover:text-[#775a19] transition-all duration-700 ease-in-out" href="#">Collections</a>
+<a class="font-notoSerif uppercase tracking-widest text-sm text-[#1c1c19] dark:text-[#fcf9f4] opacity-70 hover:opacity-100 hover:text-[#775a19] transition-all duration-700 ease-in-out" href="#">Heritage</a>
+<a class="font-notoSerif uppercase tracking-widest text-sm text-[#1c1c19] dark:text-[#fcf9f4] opacity-70 hover:opacity-100 hover:text-[#775a19] transition-all duration-700 ease-in-out" href="#">Editorial</a>
+<a class="font-notoSerif uppercase tracking-widest text-sm text-[#1c1c19] dark:text-[#fcf9f4] opacity-70 hover:opacity-100 hover:text-[#775a19] transition-all duration-700 ease-in-out" href="#">Bespoke</a>
+</div> -->
+<!-- <div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-primary text-2xl cursor-pointer" data-icon="shopping_bag">shopping_bag</span>
+</div> -->
+</nav>
+<!-- Hero Section -->
+<header class="relative h-screen w-full overflow-hidden flex items-center justify-center">
+<div class="absolute inset-0 bg-primary/10 z-10"></div>
+<img alt="" class="absolute inset-0 w-full h-full object-cover scale-105" data-alt="Stunning male model in a royal deep maroon sherwani with intricate gold embroidery standing in a palace courtyard with soft cinematic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWdmo4Wl0_vwgG_BW-jcpAGaPUPiWK6VmteAhLd8qB2qtTug-eO2GquOq-oXSKpI2k3PWeclTiD_FeTmH6Kdg-QvXw0K2WjBSj7kuZOrV2jUk1ddoekkZmD0Jglw7o3FFEOtYLq93xZDkj40zscanDIBMN7cuEQQzrRT0hTJjVyKnos9AM1jKTQNmLffparh1vDy8HrDiv1b18sUYenUIkhEr0Gl14SPpGcxFw64ajEdaReGPGI-qsc-S4y3hjxoXPzb1-6zveqOJl"/>
+<div class="relative z-20 text-center px-6">
+<h1 class="text-6xl md:text-9xl font-headline italic tracking-tighter text-white text-shadow-editorial mb-4">Rizwan Clothes</h1>
+<p class="text-lg md:text-2xl font-body tracking-[0.3em] uppercase text-white/90">Wear the Culture. Own the Style.</p>
+</div>
+<div class="absolute bottom-12 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-4">
+<span class="text-[10px] tracking-[0.5em] uppercase text-white/60">Scroll to Explore</span>
+<div class="w-px h-16 bg-gradient-to-b from-white/60 to-transparent"></div>
+</div>
+</header>
+<!-- Fashion Showcase (Asymmetric Interactive Regions) -->
+<section class="py-32 bg-surface">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-12 gap-12 items-end">
+<!-- Card 1 -->
+<div class="col-span-12 md:col-span-7 group cursor-pointer relative overflow-hidden aspect-[4/5]">
+<img alt="" class="w-full h-full object-cover transition-transform duration-[2000ms] ease-out group-hover:scale-110" data-alt="Cinematic shot of a male model in a royal traditional gold kurta with detailed silk textures against a warm beige background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDTZ0qdBADxaoxbQMwaxro5QoTq0dIF3PKbStP5AQPDyHsOnC16m2NXw2zcXfTF6hzehLhJPIGn1Qa8VuLl5r-oSJPpA6fFVPMI4B5fhIJzdb0VfDwJWvSO7hZz3jXkUVw6lK5-5BtJoJ1M3dLF32Yw-xyPmX9tYOkG-ZzIDBkWtAtcLdj1ndgPwQTETOpsTpaIXe4YTZH1qoIvOjWyBq9HF73H3qmacFxMo1D4xaA4NBOpc2fQo0WsDQrM-GsC3ZnUobaTLfqxl02"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700 flex flex-col justify-end p-12">
+<h3 class="text-4xl font-headline text-white italic">Royal Kurta Look</h3>
+<div class="w-0 group-hover:w-full h-px bg-secondary mt-4 transition-all duration-1000"></div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="col-span-12 md:col-span-5 flex flex-col gap-12">
+<div class="group cursor-pointer relative overflow-hidden aspect-square">
+<img alt="" class="w-full h-full object-cover transition-transform duration-[2000ms] ease-out group-hover:scale-110" data-alt="Elegant female model in a modern silk kurti with minimal golden patterns and sophisticated drapes in an editorial studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGHhT4NZjdlneXOjRVuGMfnH1JRXwZfkdHjzrriSJXc8GARCZrtJBso4JsmQTtICeizYytkKWn46Y9RtnHPo8t14V57ADU5Td79hb0Sv3oKRKHr_DevyjtAHWi_kk7lA_dLWCCcUb9WVglGczWAzaT1F9_JTwQBuIxIUOuSHNFEOLxhuWEgkECEhGBUWvUJqhoyyHBw5-pbenrcL3HwExlOAxxW0U8ZUhh7U43_YE8iBGjvCvGZ7P5dUlZbHwryYAYMir-7G13Svzj"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700 flex flex-col justify-end p-8">
+<h3 class="text-3xl font-headline text-white italic">Modern Kurti Style</h3>
+<div class="w-0 group-hover:w-full h-px bg-secondary mt-2 transition-all duration-1000"></div>
+</div>
+</div>
+<div class="bg-surface-container-low p-12 relative overflow-hidden">
+<div class="absolute -right-4 top-0 text-[12rem] font-headline text-primary/5 italic select-none">Style</div>
+<p class="font-headline text-2xl text-primary leading-relaxed relative z-10 italic">
+                            "True elegance is the harmony of heritage and contemporary soul."
+                        </p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="col-span-12 md:col-span-4 md:col-start-2 group cursor-pointer relative overflow-hidden aspect-[3/4] -mt-24">
+<img alt="" class="w-full h-full object-cover transition-transform duration-[2000ms] ease-out group-hover:scale-110" data-alt="Festive ethnic wear featuring rich textures of velvet and silk with intricate embroidery under warm glowing ambient lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiLXwalwTB1tpAPp0xH_xJj6WUjvZGN0PjyIRg2P2-4Wl6TsuS1DwBSAbuQfltz_fVkF0cFt7ZdgWSlw9Fl1VLwV3WgqlQD0qGkMBJ8PNlEeKq7Ic64Yl2GGJFP3JcAOF1jbNFxI8H5xD4xBS5QV9VXFza9lwTgz3BsUJDTsqYSDw2X7AjnHare9Mxkcp40Z8WogEwhEDBLmOLGpu90G2is0zFwiSqyxmn5OlAyOhJEtEo65Viktd7sLhIyH9K3YqLJQ2LYvPsBB3S"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700 flex flex-col justify-end p-8">
+<h3 class="text-3xl font-headline text-white italic">Festive Ethnic Wear</h3>
+<div class="w-0 group-hover:w-full h-px bg-secondary mt-2 transition-all duration-1000"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Style Story (Poetic Text) -->
+<section class="py-48 bg-surface-container flex flex-col items-center justify-center text-center px-8 relative overflow-hidden">
+<div class="absolute left-0 top-1/2 -translate-y-1/2 w-48 h-px bg-secondary/30"></div>
+<div class="absolute right-0 top-1/2 -translate-y-1/2 w-48 h-px bg-secondary/30"></div>
+<div class="max-w-3xl space-y-8">
+<span class="text-secondary tracking-[0.4em] uppercase text-xs font-semibold">The Philosophy</span>
+<h2 class="text-4xl md:text-6xl font-headline italic leading-tight text-primary">A Symphony of Silk and Story</h2>
+<p class="text-lg text-on-surface-variant font-light leading-relaxed max-w-2xl mx-auto">
+                We do not just create garments; we curate moments of timeless grace. Each thread is a whisper from our ancestors, woven into the fabric of today. Rizwan is an ode to the dreamer who walks with the weight of history and the lightness of modern elegance.
+            </p>
+<div class="pt-8">
+<span class="inline-block w-12 h-12 border border-secondary rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary" data-icon="auto_awesome">auto_awesome</span>
+</span>
+</div>
+</div>
+</section>
+<!-- Lookbook (Masonry Gallery) -->
+<section class="py-32 bg-surface">
+<div class="max-w-7xl mx-auto px-8">
+<h2 class="text-6xl font-headline italic text-primary mb-24 text-center">Season Lookbook</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="space-y-8">
+<div class="group overflow-hidden bg-surface-dim grayscale hover:grayscale-0 transition-all duration-1000">
+<img alt="" class="w-full aspect-[2/3] object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="Close-up of a model's profile wearing a heavily embroidered maroon collar with golden motifs in sharp editorial focus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6TR6olwps_-J-5dNLvIGaaZmOr1nlbRDcA8sl-GtsAcF-2Xb4ZrRy9N3V8AvSIGQ9I_2rMklsnLSZ8mUrClGhUG01SA_ZnN54flsE4TEV3a_QBb1ePHwQ4e23gAKy9_uLyccMPtjS2Cw2KvLtJ7yF7TzLxYpVywiZZw4quoOB6tcLlxItb5aKw3B7HEIA55mX1AxEFRabyL42SUkSpukyTcmpwImr1W5exp6N7lSEonB7S7yzTg2E-Z_ptfeT18c8gBTwfMVdivl1"/>
+</div>
+<div class="group overflow-hidden bg-surface-dim grayscale hover:grayscale-0 transition-all duration-1000">
+<img alt="" class="w-full aspect-square object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="Fashion shot of flowy ethnic fabrics catching the wind against an ancient stone wall architectural background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7gHiu9mPtY04XRcNYj35IBDusjNcOP9BibAh6zlJsR6XkHlMMXHUf0odzkpkVKtrnaIFPWUsfQH-IadtQWeSAXDmtzeDxL9hSNGEqmoDU7D63eSdruJ1D6Y7HBcyWYzoW6Bb-mj5g-_eU7LuUtyY7Epdtz9GAgYhDBMgC1M87cGKqvzgBgNLc4zUWiIa39LxmzgdJyxYMrtYuCSuM0ztKNy_zLT7wZXNFg275leaC1yCgCQc7YEgUqhMvPDsOHX7rNQU0VaILBq9h"/>
+</div>
+</div>
+<div class="space-y-8 md:pt-24">
+<div class="group overflow-hidden bg-surface-dim grayscale hover:grayscale-0 transition-all duration-1000">
+<img alt="" class="w-full aspect-[3/4] object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="Portrait of a young man in a minimalist white kurta with gold buttons looking thoughtfully into the distance" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZIPCurEilJfSEeKQB8U4AYYD93bc8MCi5rkzaDHQGOeOG0i_CWHE346hl3HLcpIt3OUk12q-n7jmtBRadSKmkirRhyfXB4ZgmVHAJHjciP7la6Bj42kYZapxBwA8C9Vfbw5fUqn3HqX6KlfgfGq2rlAZ8t2UjLiLJe3ZhamabrN8lbHo94nw6BLMq3Bwm5pl8MOOM6h69RAFY4Z0gG8ylpUS1Dak-F9VCowEIWXhEXkLMrmn04M4JNgMXCJ7N6bjwkBIDXwJm99jN"/>
+</div>
+<div class="group overflow-hidden bg-surface-dim grayscale hover:grayscale-0 transition-all duration-1000">
+<img alt="" class="w-full aspect-[2/3] object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="Abstract shot of high-end jewelry and embroidery details on a luxury silk fabric with soft bokeh lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAg1lh5f1iSm1G7mFyam7MUAgIuWo9kQqt7AJpQEc67pIZIjAlplVhonE9G51N7lBEfM7op5kDLYfJ0RTMvhn2sxtEXwxrlhnRLdv9bpPo28N4LdnK0-9aSTNUEXh_nw0eF3IFN2TIUeFyf7W7xd4Angij-3cKK-Wda1AmCzSLJOg9nbXKIpFN-pcqQKd2Y3TY5fgw4SvgfWGopHB58VgrBXgwU24jHi1u6HAh24yhZH-AxFzDsBDz2U0aGHZvYar6Pl9DsvgDj1eh0"/>
+</div>
+</div>
+<div class="space-y-8">
+<div class="group overflow-hidden bg-surface-dim grayscale hover:grayscale-0 transition-all duration-1000">
+<img alt="" class="w-full aspect-square object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="Full body shot of a female model in an elegant festive lehenga walking through a sun-dappled historical corridor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeJXk9TD9UPp25Mx8CTQ7SJLdrV-cbZkWUMLIP1TMBrKLujnYn9uxeN3bTddpRFdxWv_sF4bxVZ4vnOkATqESjsIEGepTiEDNNoB5s0QC-g7zHBadRy9K235k1p_dvRXxG8_1rFJF3vSXJXSJe6FTqQKqqLpPVfir5ykWrejNuhIfRHrna_rEDehceqaCY6SwFIRMGdRGRMiin_qlDlSu6xwnxdxwUjmOWwIGSq17VAdZDuRKuNhWGvLjdu5lKfr3kk2NRPDzjWDh5"/>
+</div>
+<div class="group overflow-hidden bg-surface-dim grayscale hover:grayscale-0 transition-all duration-1000">
+<img alt="" class="w-full aspect-[2/3] object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="Editorial close-up of artisan hand-woven textures in gold and maroon threads on a luxury garment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPuMI_l6ICbXQcjnuciM4tQm9gJNpXJqL0dbKvWega7zgVt7NY-5KmpAMCAUjutR4p62ITGw7RIvq2I0lh778_XB8k23f3wMc5zDfbqM9QbDXg32f_4OuI6hnl5PvmeMdTFeTYKr6u9zLjun5h9gGr7jsGXAG8RSL0yVR5GwHnaBZTNbTO6ip4QznpyzHmguJa5_A-wmj1C-whLiYljby_pLAYYhsLwfmjNe5LhQj7IKj0lfqDJrXQ_wb2iOd4nviVAHvf5_tN2_Xl"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Customer Attraction / Parallax Visuals -->
+<section class="relative h-[819px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="" class="w-full h-full object-cover scale-110" data-alt="Wide cinematic shot of luxury traditional fabrics draped across a grand architectural hall with natural morning light rays" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAk8-J5uinnLwKZufE6yCqC4EOnZDQ1b-E81-X-to7RSxpdLqE9VXuB-ZMBetrgHPx53mejE02YVF6uhCKiVMP-BhfEOhH587ceLczX4aQhDKwizBBvw4AswFCT587Thiou2VX8puZDj2JTKgLMarSUYOKm7sOMrKzMd1NuCtIiFDx_ap8gaAwxh7Jyu6tLOk1LENXx2NS9YHQjCYMUvsbJGilvTqT6CqgVR0c5L4tknaP8LbR4HetY8WA9SiIBVie2hcdVpNgb5Ax5"/>
+<div class="absolute inset-0 bg-primary/40 backdrop-blur-[2px]"></div>
+</div>
+<div class="max-w-7xl mx-auto px-8 w-full relative z-10">
+<div class="md:w-1/2 space-y-6">
+<div class="w-24 h-px bg-secondary"></div>
+<h2 class="text-5xl md:text-7xl font-headline text-white italic">The Rizwan Experience</h2>
+<p class="text-white/80 text-lg font-light leading-relaxed max-w-md">
+                    Indulge in a bespoke journey of style. From private viewings to custom fittings, we ensure every stitch reflects your unique aura.
+                </p>
+</div>
+</div>
+</section>
+<!-- Order / Contact Section -->
+<section class="py-32 bg-surface">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-24">
+<div class="space-y-12">
+<h2 class="text-6xl font-headline italic text-primary leading-tight">Inquire &amp; Personalize</h2>
+<p class="text-on-surface-variant text-lg">
+                        Speak with our curators to find the perfect piece for your next milestone. We offer personalized consultations for weddings, festivals, and high-fashion galas.
+                    </p>
+<div class="space-y-4">
+<p class="font-headline text-2xl text-secondary italic">Contact</p>
+<p class="text-primary text-xl">mohdrizwan0404@gmail.com</p>
+<p class="text-primary text-xl">+91 9368054052</p>
+</div>
+</div>
+<div class="bg-surface-container-low p-12">
+<form class="space-y-12">
+<div class="relative">
+<input class="peer block w-full appearance-none border-0 border-b border-outline-variant bg-transparent px-0 py-4 focus:border-secondary focus:outline-none focus:ring-0 text-on-surface" id="name" name="name" placeholder="Your Name.." type="text"/>
+<label class="absolute top-4 -z-10 origin-[0] -translate-y-6 scale-75 transform text-secondary duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 uppercase tracking-widest text-xs font-semibold" for="name">Your Name</label>
+</div>
+<div class="relative">
+<input class="peer block w-full appearance-none border-0 border-b border-outline-variant bg-transparent px-0 py-4 focus:border-secondary focus:outline-none focus:ring-0 text-on-surface" id="phone" name="phone" placeholder="Phone Number.." type="tel"/>
+<label class="absolute top-4 -z-10 origin-[0] -translate-y-6 scale-75 transform text-secondary duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 uppercase tracking-widest text-xs font-semibold" for="phone">Phone Number</label>
+</div>
+<div class="relative">
+<textarea class="peer block w-full appearance-none border-0 border-b border-outline-variant bg-transparent px-0 py-4 focus:border-secondary focus:outline-none focus:ring-0 text-on-surface" id="message" name="message" placeholder="Your Message.." rows="1"></textarea>
+<label class="absolute top-4 -z-10 origin-[0] -translate-y-6 scale-75 transform text-secondary duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 uppercase tracking-widest text-xs font-semibold" for="message">Your Message</label>
+</div>
+<a id="whatsappBtn" class="block w-full text-center py-6 bg-primary text-white font-label uppercase tracking-[0.3em] hover:bg-primary/90 transition-colors duration-500" href="#">
+  Order Now on WhatsApp
+</a>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#f6f3ee] dark:bg-[#1c1c19] w-full pt-24 pb-12">
+<div class="flex flex-col items-center gap-12 px-8 max-w-7xl mx-auto">
+<div class="text-lg font-notoSerif text-[#53060c] dark:text-[#fcf9f4]">RIZWAN CLOTHES</div>
+<!-- <div class="flex flex-wrap justify-center gap-12">
+<a class="font-manrope text-[10px] tracking-[0.2em] uppercase text-[#1c1c19]/60 dark:text-[#fcf9f4]/60 hover:text-[#775a19] transition-colors duration-500" href="#">WhatsApp Concierge</a>
+<a class="font-manrope text-[10px] tracking-[0.2em] uppercase text-[#1c1c19]/60 dark:text-[#fcf9f4]/60 hover:text-[#775a19] transition-colors duration-500" href="#">Care Guide</a>
+<a class="font-manrope text-[10px] tracking-[0.2em] uppercase text-[#1c1c19]/60 dark:text-[#fcf9f4]/60 hover:text-[#775a19] transition-colors duration-500" href="#">Shipping</a>
+<a class="font-manrope text-[10px] tracking-[0.2em] uppercase text-[#1c1c19]/60 dark:text-[#fcf9f4]/60 hover:text-[#775a19] transition-colors duration-500" href="#">Privacy</a>
+</div> -->
+<div class="w-full h-px bg-secondary/20"></div>
+<div class="text-[#775a19] dark:text-[#775a19] font-manrope text-[10px] tracking-[0.2em] uppercase">
+                © 2024 RIZWAN CLOTHES. CURATING HERITAGE.
+            </div>
+</div>
+</footer>
+<script>
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const btn = document.getElementById("whatsappBtn");
+
+  btn.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    if (name === "" || phone === "") {
+      alert("Please fill Name and Phone Number");
+      return;
+    }
+
+    const whatsappNumber = "919368054052";
+
+    const text = `Hello Rizwan Clothes 👋
+
+Name: ${name}
+Phone: ${phone}
+Message: ${message ? message : "Interested in your collection"}
+
+I want to order clothes. Please share details.`;
+
+    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+
+    window.open(url, "_blank");
+  });
+
+});
+</script>
+</script>
+</body></html>
