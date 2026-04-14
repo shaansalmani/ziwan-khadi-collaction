@@ -8,7 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="script.js"></script>
+<script src="script.js" defer></script>
 <style>
   /* ===============================
    WHATSAPP BUTTON - PREMIUM STYLE
@@ -632,40 +632,5 @@ html {
             </div>
 </div>
 </footer>
-<script>
-  <script>
-document.addEventListener("DOMContentLoaded", function () {
 
-  const btn = document.getElementById("whatsappBtn");
-
-  btn.addEventListener("click", function (e) {
-    e.preventDefault();
-
-    const name = document.getElementById("name").value.trim();
-    const phone = document.getElementById("phone").value.trim();
-    const message = document.getElementById("message").value.trim();
-
-    if (name === "" || phone === "") {
-      alert("Please fill Name and Phone Number");
-      return;
-    }
-
-    const whatsappNumber = "919368054052";
-
-    const text = `Hello Rizwan Clothes 👋
-
-Name: ${name}
-Phone: ${phone}
-Message: ${message ? message : "Interested in your collection"}
-
-I want to order clothes. Please share details.`;
-
-    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
-
-    window.open(url, "_blank");
-  });
-
-});
-</script>
-</script>
 </body></html>

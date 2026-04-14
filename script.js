@@ -1,42 +1,32 @@
+document.addEventListener("DOMContentLoaded", function () {
 
+  const btn = document.getElementById("whatsappBtn");
 
-// document.addEventListener("DOMContentLoaded", function () {
+  btn.addEventListener("click", function (e) {
+    e.preventDefault();
 
-//   const btn = document.querySelector('a[href="#"]');
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const message = document.getElementById("message").value.trim();
 
-//   btn.addEventListener("click", function (e) {
-//     e.preventDefault();
+    if (!name || !phone) {
+      alert("Please fill Name and Phone Number");
+      return;
+    }
 
-//     // Get form values
-//     const name = document.getElementById("name").value.trim();
-//     const phone = document.getElementById("phone").value.trim();
-//     const message = document.getElementById("message").value.trim();
+    const text = `Hello Rizwan Clothes 👋
 
-//     // Basic validation
-//     if (!name || !phone) {
-//       alert("Please fill Name and Phone Number");
-//       return;
-//     }
+Name: ${name}
+Phone: ${phone}
+Message: ${message || "Interested in your collection"}
 
-//     // WhatsApp message format
-//     const text = `Hello Rizwan Clothes 👋
+I want to order clothes. Please share details.`;
 
-// Name: ${name}
-// Phone: ${phone}
-// Message: ${message || "Interested in your collection"}
+    const encodedText = encodeURIComponent(text);
+    const whatsappNumber = "919368054052";
 
-// I want to order clothes. Please share details.`;
+    const url = `https://wa.me/${whatsappNumber}?text=${encodedText}`;
+    window.open(url, "_blank");
+  });
 
-//     // Encode text
-//     const encodedText = encodeURIComponent(text);
-
-//     // Your WhatsApp number
-//     const whatsappNumber = "919368054052";
-
-//     // Open WhatsApp
-//     const url = `https://wa.me/${whatsappNumber}?text=${encodedText}`;
-//     window.open(url, "_blank");
-//   });
-
-// });
-
+});
